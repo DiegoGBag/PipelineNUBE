@@ -1,12 +1,8 @@
 import os
-import sys
 from datetime import datetime, timezone
 
 import requests
 from flask import Flask, jsonify, request
-
-# Permite importar la carpeta pipeline/ desde api/
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipeline.classifier import classify
 from pipeline.cleaning import clean_payload
